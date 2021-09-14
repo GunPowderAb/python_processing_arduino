@@ -14,6 +14,7 @@ void draw()
 {
   val = (val + 1) % 255;
   background(val);
+  //send to client
   myServer.write("YO HELLO");
   
   Client c = myServer.available();
