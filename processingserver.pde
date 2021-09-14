@@ -14,9 +14,10 @@ void draw()
 {
   val = (val + 1) % 255;
   background(val);
-  myServer.write("YO");
+  myServer.write("YO HELLO");
   
   Client c = myServer.available();
+  //if the client has sent something then print it
   if (c !=null)
   {
     String whatClientSaid = c.readString();
